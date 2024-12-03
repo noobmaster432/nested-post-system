@@ -120,13 +120,6 @@ export default function PostComponent() {
 
       {/* Posts and comments */}
       <div className="space-y-4">
-
-        {posts.length === 0 && (
-          <p className="text-center text-gray-500">loading...</p>
-        
-        )}
-
-
         {posts.map((post) => (
           <div
             key={post._id}
@@ -142,7 +135,6 @@ export default function PostComponent() {
 
             {/* Post Actions */}
             <div className="flex items-center space-x-4">
-              
               <button
                 className="text-blue-500 hover:underline"
                 onClick={() => toggleComments(post._id)}
